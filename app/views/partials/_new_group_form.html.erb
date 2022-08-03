@@ -1,0 +1,13 @@
+<%= form_with(model: @group, url: groups_path, data: { turbo: false }) do |form| %>
+  <div class="field">
+      <%= form.label :name %><br />
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :icon %><br />
+      <%= form.text_field :icon %>
+    </div>
+
+    <%= form.submit 'create' %>
+<%end%>
