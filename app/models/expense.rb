@@ -1,4 +1,8 @@
-class Espense < ApplicationRecord
+class Expense < ApplicationRecord
   belongs_to :user
-  has_and_belongs_to_many :groups, join_table: 'groups_expenses'
+  has_many :group_expenses
+  has_many :groups, through: :group_expenses
+
+  validates :name, presence: true
+  validates :amount, presence: true, numericality: { greater_than: 0 }
 end

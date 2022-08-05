@@ -6,7 +6,7 @@
 
     <div class="field">
       <%= form.label :icon %><br />
-      <%= form.text_field :icon %>
+      <%= form.select :icon, @emojis %>
     </div>
 
     <%= form.submit 'create' %>

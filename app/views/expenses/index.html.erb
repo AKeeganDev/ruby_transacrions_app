@@ -1,0 +1,12 @@
+<%if @expenses.empty?%>
+  <div><%="Add Expenses"%></div>
+  
+  <%else%>
+    <%@expenses.each do |expense|%>
+      <%=link_to group_expenses_path(expense.id) do %>
+      <div><%=expense.name%><%=expense.amount%></div> 
+      <%end%>
+    <%end%>
+<%end%>
+
+<%= render partial: 'partials/new_expense_form'%>

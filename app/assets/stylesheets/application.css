@@ -1,3 +1,89 @@
+@import 'rails_emoji_picker';
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('Proxima-Nova.ttf');
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Proxima Nova', 'Courier New', Courier, monospace, serif, sans-serif;
+  background-color: #3778c2;
+  color: #434b54;
+  margin: 0;
+  padding: 0;
+}
+
+.green {
+  background-color: #5fb523;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  background-color: #3778c2;
+}
+
+.navbar > * {
+  color: white;
+}
+
+.logout {
+  font-size: 2rem;
+  color: white;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+}
+
+.home > * {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
+}
+
+.home:focus {
+  outline: white 5px auto;
+}
+
+/* Splash Screen */
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Category Index */
+
+.category-card {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.category-name,
+.category-icon {
+  background-color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

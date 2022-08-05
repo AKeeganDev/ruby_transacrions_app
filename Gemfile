@@ -5,6 +5,8 @@ ruby '3.1.2'
 
 gem 'bullet'
 
+gem 'rails_emoji_picker'
+
 gem 'cancancan'
 
 gem 'rubocop', '>= 1.0', '< 2.0'

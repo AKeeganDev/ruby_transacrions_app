@@ -1,20 +1,17 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
+  get '/home' => 'users#splash', as: :splash
   root "groups#index"
-
-  # get '/public_recipes', to: "recipes#all", as: :home
+  resources :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
   resources :groups do
     resources :expenses
   end
+  get '/users/signed_out' => 'users#signed_out'
   # resources :recipes, only: [:index, :show, :new, :create, :destroy] do
   #   resources :recipe_foods, only: [:create, :destroy]
   # end

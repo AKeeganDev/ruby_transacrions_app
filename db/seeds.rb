@@ -5,6 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-admin = User.create(name: "Aaron", email: "admin@admin.com", role: "admin", password: "111111", password_confirmation: "111111", con
-firmed_at: Time.now)
+admin = User.create(name: "Aaron", email: "admin@admin.com", role: "admin", password: "111111", password_confirmation: "111111")
 
+Group.create(name: "Food", icon: "\u{1F354}", user_id: admin.id)

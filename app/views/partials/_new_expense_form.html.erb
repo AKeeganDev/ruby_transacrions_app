@@ -1,0 +1,13 @@
+<%= form_with(model: @expense, url: group_expenses_path, data: { turbo: false }) do |form| %>
+  <div class="field">
+      <%= form.label :name %><br />
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :amount %><br />
+      <%= form.text_field :amount %>
+    </div>
+
+    <%= form.submit 'create' %>
+<%end%>
