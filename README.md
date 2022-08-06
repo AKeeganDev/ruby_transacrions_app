@@ -3,7 +3,7 @@
 > This app helps you track expenses you would like to organize and keep track of. For example, if you are a frequent traveler, you can use this app to create a category for traveling and you can add the cost of each trip to your travel category. The app will keep a total of what all of your expenses are and when you click on a category you will receive a breakdown of each of the expenses.
 
 # Live demo
-For a live demo of the project, [click here](https://warm-basin-43457.herokuapp.com).
+For a live demo of the project, [click here]().
 
 ## Getting Started
 
