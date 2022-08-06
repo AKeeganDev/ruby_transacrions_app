@@ -3,6 +3,9 @@ class Group < ApplicationRecord
   has_many :group_expenses, dependent: :destroy
   has_many :expenses, through: :group_expenses, dependent: :destroy
 
+  validates :name, presence: true
+  validates :icon, presence: true
+
   def convert_to_currency
     amount = total_sum
 
