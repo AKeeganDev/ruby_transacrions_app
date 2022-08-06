@@ -1,0 +1,16 @@
+<%if user_signed_in?%>
+  <%signout_path = destroy_user_session_path%>
+<%else%>
+  <%signout_path = root_path%>
+<%end%>
+
+
+<nav class="navbar">
+<%=link_to (@back || root_path), class: "home" do%>
+<div><</div>
+<%end%>
+<div class="header"><%=(@prompt || prompt)%></div>
+<%=link_to signout_path do%>
+<div class="logout"><%="\u{1F6AA}"%></div>
+<%end%>
+</nav>

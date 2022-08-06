@@ -1,0 +1,7 @@
+<%=link_to group_expenses_path(category.id), class: "category-card" do %>
+  <div class="category-icon"><%=category.icon%></div> 
+  <div class="category-name"><%=category.name%></div> 
+  <div class="category-amount">
+  $<%=category.convert_to_currency%>
+  </div> 
+<%end%>

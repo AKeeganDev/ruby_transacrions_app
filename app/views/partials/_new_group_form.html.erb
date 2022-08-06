@@ -1,0 +1,14 @@
+<%= form_with(model: @group, url: groups_path, data: { turbo: false }) do |form| %>
+<br />
+  <div class="field">
+      <%= form.label :icon %><br />
+      <%= form.select :icon, @emojis %>
+    </div>
+  
+  <div class="field">
+      <%= form.label :name %><br />
+      <%= form.text_field :name %>
+    </div>
+
+    <%= form.submit 'create', class: "add-button" %>
+<%end%>
