@@ -23,11 +23,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_191300) do
     t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
-  create_table "expenses_groups", id: false, force: :cascade do |t|
-    t.bigint "group_id", null: false
-    t.bigint "expense_id", null: false
-    t.index ["expense_id", "group_id"], name: "index_expenses_groups_on_expense_id_and_group_id"
-    t.index ["group_id", "expense_id"], name: "index_expenses_groups_on_group_id_and_expense_id"
+  create_table "group_expenses", force: :cascade do |t|
+    t.bigint "group_id"
+    t.bigint "expense_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["expense_id"], name: "index_group_expenses_on_expense_id"
+    t.index ["group_id"], name: "index_group_expenses_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -41,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_191300) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "role", default: "user", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -53,5 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_02_191300) do
   end
 
   add_foreign_key "expenses", "users"
+  add_foreign_key "group_expenses", "expenses"
+  add_foreign_key "group_expenses", "groups"
   add_foreign_key "groups", "users"
 end

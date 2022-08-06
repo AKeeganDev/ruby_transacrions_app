@@ -1,0 +1,17 @@
+<%= render partial: 'partials/navbar', locals: {prompt: @prompt, back: (@back || root_path)}%>
+<p class="notice"><% notice %></p>
+<p class="alert"><% alert %></p>
+<%if @categories.empty?%>
+  <div class="empty-prompt"><%="Add Categories"%></div>
+  
+  <%else%>
+  <%@categories.each do |category|%>
+    <%= render partial: 'partials/category_card', locals: {category: category}%>
+  <%end%>
+<%end%>
+
+<%=link_to new_group_path do%>
+  <div class="add-button">
+    <%="Add Category"%>
+  </div>
+<%end%>

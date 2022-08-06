@@ -1,0 +1,16 @@
+<br />
+<%= form_with(model: @expense, url: group_expenses_path, data: { turbo: false }) do |form| %>
+  <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :amount %>
+      <%= form.text_field :amount %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+
+    <%= form.submit 'create', class:"add-button" %>
+<%end%>
