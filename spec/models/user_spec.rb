@@ -28,11 +28,11 @@ RSpec.describe User, type: :model do
 
     it 'name should be unique' do
       @duplicate_user = User.create(
-      name: 'admin',
-      email: 'admin@admin.com',
-      password: '111111',
-      password_confirmation: '111111'
-    )
+        name: 'admin',
+        email: 'admin@admin.com',
+        password: '111111',
+        password_confirmation: '111111'
+      )
       expect(@duplicate_user).to_not be_valid
     end
   end
