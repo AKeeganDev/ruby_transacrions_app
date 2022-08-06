@@ -1,12 +1,23 @@
+<%= render partial: 'partials/navbar', locals: {prompt: @prompt}%>
+<%= render partial: 'partials/category_card', locals: {category: @group}%>
+
 <%if @expenses.empty?%>
-  <div><%="Add Expenses"%></div>
+  <div class="empty-prompt"><%="Add Expenses"%></div>
   
   <%else%>
+  <div class="expense-list">Expenses</div>
     <%@expenses.each do |expense|%>
-      <%=link_to group_expenses_path(expense.id) do %>
-      <div><%=expense.name%><%=expense.amount%></div> 
-      <%end%>
+      <div class="category-card"> 
+      <div class="category-name"><%=expense.name%></div> 
+      <div class="category-amount">
+      $<%=expense.convert_to_currency%>
+      </div>
+      </div>
     <%end%>
 <%end%>
 
-<%= render partial: 'partials/new_expense_form'%>
+<%=link_to new_group_expense_path do%>
+  <div class="add-button">
+    <%="Add Expenses"%>
+  </div>
+<%end%>

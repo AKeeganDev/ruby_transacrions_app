@@ -9,16 +9,63 @@ a {
   text-decoration: none;
 }
 
+.main-navigation ul li.left ul {
+  left: initial;
+  left: auto;
+}
+
 * {
   font-family: 'Proxima Nova', 'Courier New', Courier, monospace, serif, sans-serif;
-  background-color: #3778c2;
   color: #434b54;
   margin: 0;
   padding: 0;
 }
 
-.green {
+body {
+  background-color: #f1f3f2;
+}
+
+.empty-prompt {
+  display: flex;
+  justify-content: center;
+  font-size: 3vw;
+  margin: 11rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 4vw;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+input {
+  font-size: 4vw;
+}
+
+select {
+  font-size: 10vw;
+}
+
+option {
+  text-align: center;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
   background-color: #5fb523;
+  padding: 1rem;
+  margin: 3rem 5vw;
+  font-size: 4vw;
+  color: white;
 }
 
 /* Navbar */
@@ -31,12 +78,16 @@ a {
   background-color: #3778c2;
 }
 
+.header {
+  font-size: 3vw;
+}
+
 .navbar > * {
   color: white;
 }
 
 .logout {
-  font-size: 2rem;
+  font-size: 4vw;
   color: white;
 }
 
@@ -48,7 +99,7 @@ button {
 }
 
 .home > * {
-  font-size: 1.5rem;
+  font-size: 3vw;
   font-weight: 900;
   color: white;
 }
@@ -75,13 +126,83 @@ button {
   margin: 1rem;
   padding: 1rem;
   align-items: center;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
 .category-name,
 .category-icon {
   background-color: white;
   text-decoration: none;
-  font-size: 2rem;
+}
+
+.category-name {
+  font-size: 4vw;
+  text-align: center;
+}
+
+.category-icon {
+  font-size: 8vw;
+}
+
+.category-amount {
+  font-size: 3vw;
+}
+
+.expense-list {
+  display: flex;
+  justify-content: center;
+  font-size: 4vw;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+/* Splash */
+
+.logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.splash-buttons {
+  display: flex;
+}
+
+.splash-button {
+  display: flex;
+  justify-content: center;
+  background-color: #5fb523;
+  padding: 1rem;
+  margin: 1rem 5px;
+  font-size: 4vw;
+  color: white;
+}
+
+/* Backsplash */
+
+.backsplash {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3778c2;
+  height: 100vh;
+}
+
+.backsplash-home {
+  margin-top: 1rem;
+  font-size: 20vw;
+  justify-content: center;
+  background-color: #5fb523;
+  display: flex;
+  padding: 3rem;
+  border-radius: 50%;
+  color: white;
 }
 
 /*

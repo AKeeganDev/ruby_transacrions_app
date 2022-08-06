@@ -1,7 +1,14 @@
-<h1>Sign in, bruh</h1>
-<%=link_to new_user_session_path do%>
-<div class="login-path"><%="Log in"%></div>
-<%end%>
-<%=link_to "/users/sign_up" do%>
-<div class="signup-path"><%="Sign up"%></div>
-<%end%>
+<div class="backsplash">
+  <div>
+    <div class="backsplash-home"><%="\u{1F4B8}"%></div>
+    <div class="logo">Budget App </div>
+    <div class="splash-buttons">
+  <%=link_to new_user_session_path do%>
+    <div class="splash-button"><%="Log in"%></div>
+  <%end%>
+  <%=link_to new_user_registration_path do%>
+    <div class="splash-button"><%="Sign up"%></div>
+  <%end%>
+</div>
+  </div>
+</div>

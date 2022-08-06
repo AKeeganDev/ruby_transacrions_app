@@ -2,14 +2,15 @@ class ExpensesController < ApplicationController
   before_action :signed_in?
 
   def index
-    @prompt = 'Add Expense'
     @expense = Expense.new
     @group = Group.find(params[:group_id])
-    @expenses = Expense.where(group_id: params[:group_id])
-    p @group.expense
+    @expenses = @group.expenses
+    @prompt = "Expenses for #{@group.name}"
   end
 
   def new
+    @group = Group.find(params[:group_id])
+    @prompt = "Add expense for #{@group.name}"
     @expense = Expense.new
   end
 
@@ -17,13 +18,13 @@ class ExpensesController < ApplicationController
     @user = current_user
     @group = Group.find(params[:group_id])
     @expense = Expense.new(expense_params)
-    @expense.group_id = @user.id
     @expense.user_id = @user.id
     if @expense.save
-      redirect_to group_expenses_path
+      @group_expense = GroupExpense.create(group_id: @group.id, expense_id: @expense.id)
     else
-      render :new
+      flash[:notice] = 'Number must be greater than 0'
     end
+    redirect_to group_expenses_path
   end
 
   def expense_params

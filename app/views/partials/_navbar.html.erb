@@ -1,8 +1,8 @@
 <nav class="navbar">
-<%=button_to root_path, class: "home" do%>
+<%=link_to root_path, class: "home" do%>
 <div><</div>
 <%end%>
-<div><%=@prompt%></div>
+<div class="header"><%=@prompt%></div>
 <%=link_to destroy_user_session_path do%>
 <div class="logout"><%="\u{1F6AA}"%></div>
 <%end%>
