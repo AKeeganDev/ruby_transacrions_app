@@ -6,11 +6,13 @@ class ExpensesController < ApplicationController
     @group = Group.find(params[:group_id])
     @expenses = @group.expenses
     @prompt = "Expenses for #{@group.name}"
+    @back = root_path
   end
 
   def new
     @group = Group.find(params[:group_id])
     @prompt = "Add expense for #{@group.name}"
+    @back = group_expenses_path
     @expense = Expense.new
   end
 

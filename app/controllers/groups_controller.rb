@@ -8,6 +8,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @prompt = 'Create a Category'
+    @back = root_path
     @group = Group.new
     @emojis = ["\u{1F354}", "\u{1F957}", "\u{2708}", "\u{1F697}", "\u{1F68C}", "\u{1F4B0}", "\u{1F4B3}", "\u{1F527}",
                "\u{1F3BC}"]
@@ -15,6 +16,7 @@ class GroupsController < ApplicationController
 
   def create
     @prompt = 'Create Expense Category'
+    @back = root_path
     @user = current_user
     @group = Group.new(group_params)
     @group.user_id = @user.id

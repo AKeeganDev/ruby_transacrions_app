@@ -46,8 +46,27 @@ form {
   margin-bottom: 2rem;
 }
 
+.invisible {
+  display: none
+}
+
 input {
   font-size: 4vw;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type=checkbox] {
+  width: 4vw;
+  height: 4vh;
+}
+
+.log {
+  margin: 0;
+  width: 100%;
 }
 
 select {
@@ -56,6 +75,11 @@ select {
 
 option {
   text-align: center;
+}
+
+.forgot {
+  display: flex;
+  justify-content: center;
 }
 
 .add-button {
