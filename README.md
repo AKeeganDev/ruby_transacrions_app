@@ -61,7 +61,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-Credit to **[Gregoire Vella](https://www.behance.net/gregoirevella)** on Behance, the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs),  [Creative Commons License is here](https://creativecommons.org/licenses/)
+Credit to **[Gregoire Vella](https://www.behance.net/gregoirevella)** on Behance, the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)),  [Creative Commons License is here](https://creativecommons.org/licenses/)
 
 ## 📝 License
 
