@@ -11,7 +11,7 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/AKeeganDev/ruby_transacrions_app.git
+ git clone https://github.com/AKeeganDev/ruby_transactions_app.git
  ```
  ```
  cd recipe-app
