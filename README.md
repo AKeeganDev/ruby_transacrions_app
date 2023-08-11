@@ -2,8 +2,8 @@
 
 > This app helps you track expenses you would like to organize and keep track of. For example, if you are a frequent traveler, you can use this app to create a category for traveling and you can add the cost of each trip to your travel category. The app will keep a total of what all of your expenses are and when you click on a category you will receive a breakdown of each of the expenses.
 
-# Live demo
-For a live demo of the project, [click here](https://powerful-beach-62790.herokuapp.com/home).
+# Video demo
+https://www.loom.com/share/640f3e1f115d45089eae406471fb2362?sid=1beaaf48-8d4f-4f55-ae76-20ed65716349
 
 ## Getting Started
 
